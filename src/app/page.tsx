@@ -20,6 +20,7 @@ export default function Home() {
       <div
         id="home"
         className=" relative flex flex-col justify-between justify-items-stretch pt-10 min-h-screen bg-gradient-to-t from-[rgba(6, 44, 48, 0.53)] to-[rgba(6, 44, 48, 0.53)]"
+        style={{ backgroundImage: "url(/assets/Home_background.png)" }}
       >
         <img src="assets/home_heroImage.png" alt="" className="hero_image" />
         <div className="home_content">
