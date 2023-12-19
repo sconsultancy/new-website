@@ -46,8 +46,7 @@
 }
 .home_bottom {
   min-height: 170px;
-  background-image: linear-gradient(rgba(6, 44, 48, 0), rgba(6, 44, 48, 0)),
-    url("/assets/home_Vector.svg");
+
   background-size: cover;
   width: 100%;
 }
