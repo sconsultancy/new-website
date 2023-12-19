@@ -1,117 +1,110 @@
 "use client";
-
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
-import Modal from "./Modal";
-import NavbarDrawer from "./NavbarDrawer";
 
+const navigationLinks = [
+  { name: "Home", href: "#home" },
+  { name: "About", href: "#info" },
+  { name: "Gallery", href: "#gallery" },
+  { name: "Resume", href: "#resume" },
+  { name: "Contact", href: "#contact" },
+];
 function Navbar() {
-  const linkList = [
-    { name: "Home", link: "/" },
-    { name: "Services", link: "/services" },
-    { name: "Blogs", link: "/blogs" },
-    { name: "Contact Us", link: "/contactus" },
-  ];
-  const [isOpen, setIsOpen] = useState(false);
-  const [navOpen, setNavOpen] = useState(true);
-  const [isSignup, setIsSignup] = useState(true);
-  const handleLogin = async (e) => {
-    setIsOpen(true);
-    setIsSignup(false);
+  const [open, setOpen] = useState(false);
+  useEffect(() => {
+    function watchScroll() {
+      window.addEventListener("scroll", checkTop);
+    }
+    watchScroll();
+
+    return () => {
+      window.removeEventListener("scroll", checkTop);
+    };
+  }, []);
+  useEffect(() => {
+    if (open) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+  }, [open]);
+
+  // For Checking Top
+  function checkTop() {
+    var component = document.getElementById("navbar");
+    var distanceToTop = component.getBoundingClientRect().top;
+    if (distanceToTop <= 0) {
+      component.classList.add("sticky");
+    }
+  }
+
+  // For Button Click
+  const handleNavBurgerClick = () => {
+    setOpen(!open);
   };
 
-  const handleSignup = async (e) => {
-    setIsOpen(true);
-    setIsSignup(true);
-  };
-  const closeModal = () => {
-    setIsOpen(false);
-  };
-  const switchType = () => {
-    // setIsOpen(false);
-    setIsSignup(!isSignup);
-  };
-  const closeDrawer = () => {
-    // console.log("triggered CloseDrawer");
-    setNavOpen(true);
-  };
-  const handleNavBurgerClick = (e) => {
-    setNavOpen(!navOpen);
-  };
   return (
-    // <div className="fixed  w-full flex justify-center">
-    <div className="flex justify-center pt-3  w-full  self-center fixed z-50   ">
-      <div className="flex bg-white py-5  w-5/6   self-center justify-between px-5 rounded-full max-[1100px]:hidden">
-        <div className="flex items-center">
-          <Link href={"/"}>
-            <h1 className=" font-black text-2xl">SCG</h1>
-          </Link>
+    <div>
+      <div id="navbar">
+        {/* <div className=" text-white flex justify-center">Name</div> */}
+        <div className=" flex justify-center max-md:hidden">
+          {navigationLinks.map((e, i) => {
+            return (
+              <Link
+                className="text-white m-6 text-2xl inline"
+                href={e.href}
+                key={i}
+              >
+                {e.name}
+              </Link>
+            );
+          })}
         </div>
-        <div className="flex">
-          <div className="flex items-center pr-12">
-            {linkList.map((e, i) => {
+      </div>
+      <div className=" hidden max-md:flex">
+        <div className=" bg-white h-20 w-20 rounded-full fixed top-3  right-10 flex items-center justify-center z-50   ">
+          <button onClick={handleNavBurgerClick} className="z-50">
+            <div className=" flex flex-col ">
+              <div
+                className={`bg-black h-1 w-8 rounded-full mb-1 ${
+                  open ? "" : "rotate-45 relative top-1"
+                } `}
+              ></div>
+              <div
+                className={`bg-black h-1 w-8 rounded-full  mb-1 ${
+                  open ? "" : "hidden"
+                }`}
+              ></div>
+              <div
+                className={`bg-black h-1 w-8 rounded-full mb-1 ${
+                  open ? "" : "-rotate-45 relative bottom-1"
+                }`}
+              ></div>
+            </div>
+          </button>
+        </div>
+        {/* Modal */}
+        <div
+          className={` fixed ${
+            open ? "flex" : "hidden"
+          } justify-center items-center h-screen w-screen left-0 top-0 light_glass  z-20 `}
+        >
+          <div className="bg-white flex flex-col absolute right-0 top-0 pt-20 h-screen w-[50vw] items-center ">
+            {navigationLinks.map((e, i) => {
               return (
                 <Link
-                  className=" px-2 font-semibold text-lg"
+                  className="text-black m-6 text-2xl "
+                  href={e.href}
                   key={i}
-                  href={e.link}
                 >
                   {e.name}
                 </Link>
               );
             })}
           </div>
-          <div className="flex items-center">
-            <button
-              className=" mx-3 h-[51px] w-[143px] rounded-full  border-[1px] border-black font-semibold text-lg"
-              onClick={handleLogin}
-            >
-              Login
-            </button>
-            <button
-              className=" mx-3 h-[51px] w-[143px] rounded-full bg-black text-white   font-semibold text-lg"
-              onClick={handleSignup}
-            >
-              Signup
-            </button>
-            <Modal
-              isOpen={isOpen}
-              close={closeModal}
-              isSignup={isSignup}
-              switchType={switchType}
-            ></Modal>
-          </div>
         </div>
       </div>
-      <NavbarDrawer
-        isOpen={navOpen}
-        handleLogin={handleLogin}
-        handleSignup={handleSignup}
-        closeDrawer={closeDrawer}
-      ></NavbarDrawer>
-      <div className=" bg-white h-20 w-20 rounded-full min-[1101px]:hidden absolute right-10 flex items-center justify-center  ">
-        <button onClick={handleNavBurgerClick} className="z-50">
-          <div className=" flex flex-col ">
-            <div
-              className={`bg-black h-1 w-8 rounded-full mb-1 ${
-                navOpen ? "" : "rotate-45 relative top-1"
-              } `}
-            ></div>
-            <div
-              className={`bg-black h-1 w-8 rounded-full  mb-1 ${
-                navOpen ? "" : "hidden"
-              }`}
-            ></div>
-            <div
-              className={`bg-black h-1 w-8 rounded-full mb-1 ${
-                navOpen ? "" : "-rotate-45 relative bottom-1"
-              }`}
-            ></div>
-          </div>
-        </button>
-      </div>
     </div>
-    // </div>
   );
 }
 
