@@ -10,7 +10,7 @@ function Gallery() {
             return (
               <div key={i} className=" flex justify-center">
                 <img
-                  src={`/assets/gallery/gallery_pic${e}.png`}
+                  src={`assets/gallery/gallery_pic${e}.png`}
                   className="gallery_image items-center"
                   alt=""
                 />

@@ -53,11 +53,7 @@ function Contact() {
               </svg>
             </Link>
           </div>
-          <img
-            src="/assets/contact_image.png"
-            alt=""
-            className="footer_image"
-          />
+          <img src="assets/contact_image.png" alt="" className="footer_image" />
         </div>
         {/* Contact Right */}
         <div className=" flex flex-col items-center bg-orange-300 footer_content w-[50vw] max-lg:w-full py-[200px] max-lg:py-[100px]">
