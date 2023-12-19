@@ -117,7 +117,7 @@ export default function Home() {
         </div>
         <div
           className="home_bottom"
-          style={{ backgroundImage: "url(assets/home_Vector.svg)" }}
+          style={{ backgroundImage: "url(/assets/home_Vector.svg)" }}
         ></div>
       </div>
       <Navbar></Navbar>
