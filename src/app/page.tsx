@@ -33,9 +33,7 @@ export default function Home() {
             </div>
             <div className="logos white ">
               <div className="home_logos">
-                {/* <div> */}
                 <div className="flex bottom-14 space-x-8 mt-8 justify-center">
-                  {/* {iconLink.map()} */}
                   <Link href={iconLink.facebook}>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -94,7 +92,6 @@ export default function Home() {
                     </svg>
                   </Link>
                 </div>
-                {/* <Grid container justifyContent="space-between"> */}
                 <Link href={iconLink.facebook}>
                   <i className="fa-brands fa-facebook-f home_icon "></i>
                 </Link>
@@ -113,8 +110,6 @@ export default function Home() {
                 <Link href={iconLink.twitter}>
                   <i className="fa-brands fa-twitter home_icon"></i>
                 </Link>
-                {/* </Grid> */}
-                {/* </div> */}
               </div>
             </div>
           </div>
@@ -130,7 +125,19 @@ export default function Home() {
       <Resume></Resume>
       <Contact></Contact>
       <Footer></Footer>
-      {/* <div className=" h-[200vh] bg-slate-500"></div> */}
     </div>
   );
+}
+{
+  /*
+->Correct Navbar
+->Correct Gallery
+-> Correct Footer
+-> Check Responsivenesss
+
+
+After Deploy
+->Optimize Images
+
+*/
 }

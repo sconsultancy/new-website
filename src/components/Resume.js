@@ -18,10 +18,10 @@ function Resume() {
               <p className=" mt-1 font-medium">2018</p>
             </div>
             <div className=" text-2xl max-w-[325px] max-[700px]:max-w-[65vw] min-[700px]:text-left">
-              <p className="">Full House Entertainment. Sony Sabtv.</p>
-              <p className=" mt-1 ">
-                Did Prominent and Continuity Role Name - Sunder, Brother of
-                Veteran Actor Ranjeet Ji for 8 months.
+              <p className=" mt-1  max-[520px]:text-xl  max-[420px]:text-lg">
+                Full House Entertainment. Sony Sabtv. Did Prominent and
+                Continuity Role Name - Sunder, Brother of Veteran Actor Ranjeet
+                Ji for 8 months.
               </p>
             </div>
           </div>
@@ -30,7 +30,7 @@ function Resume() {
               <h3 className=" min-w-[10rem] font-semibold">Manmohini</h3>
               <p className=" mt-1 font-medium">2019</p>
             </div>
-            <p className="text-2xl max-w-[325px] max-[700px]:max-w-[65vw] min-[700px]:text-left">
+            <p className="text-2xl max-w-[325px] max-[700px]:max-w-[65vw] min-[700px]:text-left max-[520px]:text-xl max-[420px]:text-lg">
               I did a Prominent and Continuity role as a GIRIJA SHANKAR for
               around 8 months. In serial, I played many shades like comedy,
               negative, serious, Settled, etc.
@@ -41,7 +41,7 @@ function Resume() {
               <h3 className=" min-w-[10rem] font-semibold">Mithai </h3>
               <p className=" mt-1 font-medium">2022</p>
             </div>
-            <p className="text-2xl max-w-[325px] max-[700px]:max-w-[65vw] min-[700px]:text-left">
+            <p className="text-2xl max-w-[325px] max-[700px]:max-w-[65vw] min-[700px]:text-left max-[520px]:text-xl max-[420px]:text-lg">
               I am happy to be back with the Zee TV family with Serial
               &quot;MITHAI &quot; currently on-aired. In MITHAI i am playing an
               prominent role of Animesh Mishra. Mine will be a positive

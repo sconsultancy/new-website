@@ -20,13 +20,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body
-        className={" main_body "}
-        style={{ backgroundImage: "url(/hero_bg.png)" }}
-      >
-        <Navbar></Navbar>
+      <body className={" main_body "}>
+        {/* <Navbar></Navbar> */}
         {children}
-        <Footer></Footer>
+        {/* <Footer></Footer> */}
       </body>
     </html>
   );

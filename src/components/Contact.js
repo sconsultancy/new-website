@@ -14,8 +14,8 @@ function Contact() {
     <div id="contact" className=" mt-32">
       {/* Contact left */}
       <div className=" flex max-lg:flex-col max-lg:items-center max-lg:space-y-16">
-        <div className=" flex  align-bottom  justify-end max-lg:justify-center items-center w-[50vw] max-lg:w-full">
-          <div className="flex flex-col bottom-14 space-y-[15px] py-[20px] p-[10px] justify-center bg-[#0D2427]">
+        <div className=" flex max-[440px]:flex-col-reverse max-[440px]:items-center items-end  justify-end max-lg:justify-center w-[50vw] max-lg:w-full">
+          <div className="flex  min-[440px]:flex-col bottom-14 min-[440px]:space-y-[15px] max-[440px]:space-x-[15px] py-[20px] p-[10px] justify-center bg-[#0D2427]">
             <Link href={iconLink.facebook}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -53,20 +53,24 @@ function Contact() {
               </svg>
             </Link>
           </div>
-          <img src="assets/contact_image.png" alt="" className="footer_image" />
+          <img
+            src="assets/contact_image.png"
+            alt=""
+            className="footer_image  max-[440px]:w-3/5"
+          />
         </div>
         {/* Contact Right */}
         <div className=" flex flex-col items-center bg-orange-300 footer_content w-[50vw] max-lg:w-full py-[200px] max-lg:py-[100px]">
-          <div className=" w-[400px]">
+          <div className=" max-w-[400px] max-[500px]:max-w-3/5">
             <p className=" text-2xl font-semibold my-3">Contact Me</p>
             <h2 className=" text-4xl font-bold my-3">Get In Touch</h2>
-            <div className="flex items-start my-1 mt-4">
-              <h3 className="footer_right_h3">Contact No:</h3>
-              <p className="footer_right_text">+91-9820476993</p>
+            <div className="flex max-[400px]:flex-col my-1 mt-4">
+              <h3 className="text-xl font-medium">Contact No:</h3>
+              <p className=" text-xl">+91-9820476993</p>
             </div>
-            <div className="flex items-start my-1">
-              <h3 className="footer_right_h3">Email Id:</h3>
-              <p className="footer_right_text">Rajeshsharma9284@gmail.com</p>
+            <div className="flex max-[400px]:flex-col  my-1">
+              <h3 className="text-xl font-medium">Email Id:</h3>
+              <p className=" text-xl">Rajeshsharma9284@gmail.com</p>
 
               {/* <p>Rajeshsharma9284@gmail.com</p> */}
             </div>
