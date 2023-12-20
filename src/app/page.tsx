@@ -5,6 +5,7 @@ import Gallery from "@/components/Gallery";
 import Resume from "@/components/Resume";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import Head from "next/head";
 
 export default function Home() {
   const iconLink = {

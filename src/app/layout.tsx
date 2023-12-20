@@ -20,6 +20,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <title>Rajesh Ganesh Sharma</title>
       <body className={" main_body "}>
         {/* <Navbar></Navbar> */}
         {children}
