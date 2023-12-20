@@ -21,7 +21,7 @@ function Gallery() {
       </div>
       <div className="gallery_bottom">
         <img
-          src={"/assets/gallery/gallery_vector.svg"}
+          src={"assets/gallery/gallery_vector.svg"}
           alt=""
           style={{ width: "100%" }}
         />
