@@ -30,7 +30,7 @@ export default function Home() {
         <div className="home_content">
           <div className="home_right">
             <div className="home_content_header">
-              <h1 className="white">RAJESH GANESH SHARMA</h1>
+              <h1 className="white">New RAJESH GANESH SHARMA</h1>
             </div>
             <div className="logos white ">
               <div className="home_logos">
