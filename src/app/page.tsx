@@ -16,17 +16,24 @@ export default function Home() {
     imdb: "https://imdb.to/3JF1IkZ",
     twitter: "https://bit.ly/3JCiZvl",
   };
+
   return (
     <div>
       <div
         id="home"
         className=" relative flex flex-col justify-between justify-items-stretch pt-10 min-h-screen bg-gradient-to-t from-[rgba(6, 44, 48, 0.53)] to-[rgba(6, 44, 48, 0.53)]"
+        //  Place ID - hero_bg
         style={{
           backgroundImage:
-            "linear-gradient(rgba(6, 44, 48, 0.53),rgba(6, 44, 48, 0.53)),url(assets/Home_background.png)",
+            "linear-gradient(rgba(6, 44, 48, 0.53),rgba(6, 44, 48, 0.53)),url(assets/hero/Home_background.png)",
         }}
       >
-        <img src="assets/home_heroImage.png" alt="" className="hero_image" />
+        {/* PlaceID hero_img */}
+        <img
+          src="assets/hero/home_heroImage.png"
+          alt=""
+          className="hero_image"
+        />
         <div className="home_content">
           <div className="home_right">
             <div className="home_content_header">
@@ -117,7 +124,8 @@ export default function Home() {
         </div>
         <div
           className="home_bottom"
-          style={{ backgroundImage: "url(assets/home_Vector.svg)" }}
+          // Place ID = hero_svg
+          style={{ backgroundImage: "url(assets/hero/home_Vector.svg)" }}
         ></div>
       </div>
       <Navbar></Navbar>
@@ -131,6 +139,20 @@ export default function Home() {
 }
 {
   /*
+  -> Create Gallery
+  -> Create Tiktok Like Short imported from YT
+-> Create List of Images
+-> Devide them in sections
+-> Create place ID
+-> Add all images through database
+-> How to add images
+-> How to change Image
+-> How to Delete Image
+-> How to finalize and post it on github
+
+
+
+
 ->Correct Navbar
 ->Correct Gallery
 -> Correct Footer

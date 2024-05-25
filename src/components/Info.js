@@ -14,7 +14,8 @@ function Info() {
       className="flex justify-evenly items-center max-lg:flex-col max-lg:space-y-16 py-[100px]"
     >
       <div className="info_content_image_backgound">
-        <img src="assets/info_image.png" alt="" />
+        {/* Place id info_img */}
+        <img src="assets/info/info_image.png" alt="" />
       </div>
       <div className="flex flex-col items-start">
         <span className=" white max-w-[500px] pb-6 text-[22px] max-sm:text-lg max-sm:max-w-[75vw]">

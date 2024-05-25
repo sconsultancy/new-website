@@ -1,6 +1,7 @@
 import React from "react";
 
 function Gallery() {
+  // Here add
   const tempArray = [1, 2, 3, 4, 5, 6, 7, 8];
   return (
     <div>
@@ -9,6 +10,8 @@ function Gallery() {
           {tempArray.map((e, i) => {
             return (
               <div key={i} className=" flex justify-center">
+                {/* Place ID - gallery_img1,2... */}
+
                 <img
                   src={`assets/gallery/gallery_pic${e}.png`}
                   className="gallery_image items-center"

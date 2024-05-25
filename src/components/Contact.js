@@ -54,8 +54,9 @@ function Contact() {
                 </svg>
               </Link>
             </div>
+            {/* Place ID - Contact_Img */}
             <img
-              src="assets/contact_image.png"
+              src="assets/contact/contact_image.png"
               alt=""
               className="footer_image  max-[440px]:w-4/5"
             />
